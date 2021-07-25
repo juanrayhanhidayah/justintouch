@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Web</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        .data {
+
+            height: 500px;
+            width: 80%;
+            background-color: lavender;
+            margin-left: 10%;
+            margin-top: 50px;
+            padding: 20px;
+        }
+
+        .table {
+            width: 100%;
+            margin-top: 20px;
+            font-family: calibri;
+        }
+
+        .form {
+            margin-top: 20px;
+        }
+
+        th,
+        td {
+            height: 40px;
+            text-align: center;
+            padding: 5px;
+        }
+
+        input {
+            height: 40px;
+            text-indent: 20px;
+        }
+
+        button {
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="data">
+        <h1>Superheroes</h1>
+
+        <div class="form">
+            <form onsubmit="addSuperhero(event)">
+                <input type="text" required placeholder="Name" id="Name">
+                <input type="number" required placeholder="Age" id="Age">
+                <input type="text" required placeholder="Planet" id="Planet">
+                <input type="text" required placeholder="Height" id="Height">
+                <button type="submit">Add Heroes</button>
+            </form>
+        </div>
+
+        <div class="form">
+            <input type="text" placeholder="Search here" onkeyup="searchByName()" id="searchName" />
+        </div>
+
+        <table border="1" class="table" cellspacing="0">
+            <thead>
+                <tr>
+                    <th>Sr No</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Planet</th>
+                    <th>Height</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody class="tdata" id="tdata">
+
+            </tbody>
+        </table>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
